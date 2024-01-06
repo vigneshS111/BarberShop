@@ -36,7 +36,7 @@ const App = () => {
     <main className="w-full overflow-hidden">
       <div className="paddingX flexCenter">
         <div className="boxWidth">
-          <Nav2 info={info} setInfo={setInfo} />
+          <Nav info={info} setInfo={setInfo} />
         </div>
       </div>
       <Routes>
