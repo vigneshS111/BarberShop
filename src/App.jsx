@@ -7,6 +7,7 @@ import Reviews from "./sections/Reviews";
 import BookNow from "./sections/BookNow";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.config";
+import Nav2 from "./components/Nav2";
 const App = () => {
   const [info, setInfo] = useState(null);
   const [uid, setUid] = useState(null);
@@ -35,12 +36,7 @@ const App = () => {
     <main className="w-full overflow-hidden">
       <div className="paddingX flexCenter">
         <div className="boxWidth">
-          <Nav
-            info={info}
-            setInfo={setInfo}
-            isLoading={isLoading}
-            setIsLoading={setIsLoading}
-          />
+          <Nav2 info={info} setInfo={setInfo} />
         </div>
       </div>
       <Routes>

@@ -13,6 +13,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 const Reviews = () => {
   const storage = getStorage(app);
   const [customerReviews, setCustomerReviews] = useState([]);
+  const [loggedIn, setLoggedIn] = useState(true);
   useEffect(() => {
     // Reference to the "Reviews" collection
     const reviewsCollection = collection(firestore, "Reviews");
@@ -39,7 +40,7 @@ const Reviews = () => {
 
   const isReviewValid = review.comment.trim() !== "";
   const isRatingValid = review.rate !== "";
-  const isPostButtonEnabled = isReviewValid && isRatingValid;
+  const isPostButtonEnabled = isReviewValid && isRatingValid && loggedIn;
 
   const handleImageChange = async (event) => {
     const file = event.target.files[0];
@@ -75,6 +76,7 @@ const Reviews = () => {
     const user = auth.currentUser;
 
     if (!user) {
+      setLoggedIn(false);
       console.error("User not authenticated");
       return;
     }
@@ -96,8 +98,11 @@ const Reviews = () => {
       // Close the modal or reset the review state as needed
       setShowSuccessModal(false);
       setReview({ comment: "", rate: "", img: "" });
+
+      // Update loggedIn state after successful review post
     } catch (error) {
       console.error("Error adding review: ", error);
+      setLoggedIn(false);
     }
   };
 
@@ -193,7 +198,7 @@ const Reviews = () => {
                     onClick={isPostButtonEnabled ? postReview : undefined}
                   >
                     <p className="text-xl font-semibold">
-                      {isPostButtonEnabled ? "Post" : "Fill in review"}
+                      {isPostButtonEnabled ? "Post" : "Login or Fill in review"}
                     </p>
                     <IoSendSharp className="text-blue-500 w-[30px] h-[30px]" />
                   </div>
