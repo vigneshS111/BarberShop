@@ -53,10 +53,10 @@ const ReviewCard = ({
       </div>
       {Modal && (
         <div className="fixed inset-0 flex items-center justify-center z-[101] bg-slate-50">
-          <div className="flex flex-col gap-4">
-            <div className="flex justify-center">
+          <div className="flex flex-col gap-4 relative">
+            <div className="absolute top-[8px] left-[8px] bg-black rounded-full">
               <RxCross2
-                className="md:w-[32px] md:h-[32px] w-[40px] h-[40px]  cursor-pointer "
+                className="md:w-[32px] md:h-[32px] w-[40px] h-[40px] text-white cursor-pointer "
                 onClick={closeModal}
               />
             </div>
