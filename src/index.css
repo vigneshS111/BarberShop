@@ -55,9 +55,12 @@
    
   }  
 
-  .WhyChooseUs{
-    background-image: url("../src/assets/whyChooseUs.png");
-    background-size: cover;
+  @media (min-width: 769px) {
+    .WhyChooseUs {
+      background-image: url("../src/assets/whyChooseUs.png");
+      background-size: cover;
+      /* Add any other styles you want for screens larger than 768px */
+    }
   }
 
   .WhyChooseUs2{
