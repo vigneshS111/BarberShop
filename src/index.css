@@ -55,4 +55,18 @@
    
   }  
 
+  .WhyChooseUs{
+    background-image: url("../src/assets/whyChooseUs.png");
+    background-size: cover;
+  }
+
+  .WhyChooseUs2{
+    background-image: url("../src/assets/whyChooseUs2.png");
+    background-size: cover;
+  }
+
+  .Welcome{
+    background-image: url("../src/assets/welcome.png");
+    background-size: cover;
+  }
  

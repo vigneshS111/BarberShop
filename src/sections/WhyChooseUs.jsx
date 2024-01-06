@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../components/Button";
 const WhyChooseUs = () => {
   return (
-    <div className="flex md:flex-row flex-col justify-between items-end py-12 sm:px-20 px-6 gap-10  md:bg-whyChooseUs bg-cover">
+    <div className="flex md:flex-row flex-col justify-between items-end py-12 sm:px-20 px-6 gap-10 WhyChooseUs">
       <div className="flex flex-col justify-start gap-5 w-full text-black md:text-white ">
         <h2 className="text-wrap font-poppins md:text-[45px] text-[40px] font-extrabold ">
           Why choose us?

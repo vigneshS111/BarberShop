@@ -5,7 +5,7 @@ import elipse2 from "../assets/Ellipse 2.png";
 import Button from "../components/Button";
 const Welcome = () => {
   return (
-    <div className="bg-welcome bg-cover flex py-12 sm:px-20 px-6  relative max-md:flex-col">
+    <div className="Welcome flex py-12 sm:px-20 px-6  relative max-md:flex-col">
       <img src={elipse1} className="h-[450px] z-20" />
       <img src={star1} className="h-[450px] absolute z-10" />
       <img src={elipse2} className="h-[400px] absolute z-30" />
