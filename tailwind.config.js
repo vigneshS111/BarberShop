@@ -37,9 +37,9 @@ export default {
         '4xl':'10px 10px 17px 0px rgba(0,0,0,0.75)'
       },
       backgroundImage: {
-        'whyChooseUs':"linear-gradient(to right,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url('../barberShop/src/assets/whyChooseUs.png')",
-        'whyChooseUs2':"linear-gradient(to right,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url('../barberShop/src/assets/whyChooseUs2.png')",
-        'welcome':"url('../barberShop/src/assets/welcome.png')",
+        'whyChooseUs':"linear-gradient(to right,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url('src/assets/whyChooseUs.png')",
+        'whyChooseUs2':"linear-gradient(to right,rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url('src/assets/whyChooseUs2.png')",
+        'welcome':"url('src/assets/welcome.png')",
       },
       screens: {
         "wide": "1440px"
