@@ -31,7 +31,7 @@ const Reviews = () => {
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [setCustomerReviews]);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [review, setReview] = useState({ comment: "", rate: "", img: "" });
   const closeSuccessModal = () => {
@@ -146,7 +146,7 @@ const Reviews = () => {
       </div>
       <div>
         {showSuccessModal && (
-          <div className="fixed inset-0 flex items-center justify-center z-[100] px-5">
+          <div className="fixed inset-0 flex items-center justify-center z-[100] px-5 font-montserrat">
             <div className="bg-white p-10 rounded-md shadow-xl max-md:w-full w-[750px] px-5 relative border border-slate-200">
               <div className="flex flex-col  md:px-5 px-3">
                 <div className="flex flex-col gap-5">

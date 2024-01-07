@@ -13,11 +13,11 @@ const Rating = ({ setReview }) => {
     <>
       <div className="flex ">
         <div className="flex flex-col justify-center  gap-2">
-          <h2 className="font-bold font-poppins text-xl">
+          <h2 className="font-bold font-montserrat text-xl">
             How would you rate it?:
           </h2>
           <Rate rating={rating} onRating={(rate) => setRating(rate)} />
-          <p className="font-poppins">Rating - {rating}</p>
+          <p className="font-montserrat">Rating - {rating}</p>
         </div>
       </div>
     </>

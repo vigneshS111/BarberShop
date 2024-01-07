@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className=" flex justify-between  pb-12 pt-6 flex-row sm:px-32 px-6 gap-5  ">
       <div className="flex flex-col gap-10  justify-start items-center">
-        <h2 className="text-wrap font-poppins md:text-[48px] text-[44px] font-semibold md:leading-[65px] leading-[65px] ">
+        <h2 className="text-wrap font-montserrat md:text-[48px] text-[44px] font-semibold md:leading-[65px] leading-[65px] ">
           <span className="font-medium md:text-[40px] text-[36px]">
             WELCOME TO
           </span>{" "}
@@ -22,11 +22,11 @@ const Hero = () => {
               <div key={key} className="flex flex-col gap-3">
                 <div className="flex flex-row justify-start items-center w-full gap-2">
                   <MdLocationPin />
-                  <p className="font-poppins">{item.location}</p>
+                  <p className="font-montserrat">{item.location}</p>
                 </div>
                 <div className="flex flex-row justify-start items-center w-full gap-2">
                   <MdPhoneInTalk />
-                  <p className="font-poppins">{item.phoneNo}</p>
+                  <p className="font-montserrat">{item.phoneNo}</p>
                 </div>
               </div>
             );

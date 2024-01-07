@@ -57,24 +57,60 @@ const Nav2 = ({ info, setInfo }) => {
   };
   return (
     <nav className="max-md:w-full md:gap-44 sm:px-20 px-8 py-3 flex md:justify-between justify-center items-center md:flex-row flex-col">
-      <div className="flex flex-row justify-center items-center text-2xl">
-        <img
-          src={logo}
-          alt="logo"
-          style={{ width: 100, height: 100 }}
-          className="object-contain"
-        />
-        <p className="font-dancingScript font-semibold mr-2 text-primary">
-          Your
-        </p>
-        <p className="font-dancingScript font-bold">Look</p>
+      <div className="flex flex-row justify-around items-center max-md:w-full ">
+        <div className="flex flex-row  items-center text-2xl">
+          <img
+            src={logo}
+            alt="logo"
+            style={{ width: 100, height: 100 }}
+            className="object-contain"
+          />
+          <p className="font-dancingScript font-semibold mr-2 text-primary">
+            Your
+          </p>
+          <p className="font-dancingScript font-bold">Look</p>
+        </div>
+        <div className="max-md:flex hidden items-center gap-8">
+          <div className="flex justify-end items-center">
+            <div className="border border-slate-400 rounded-full">
+              <img
+                src={info && info.photoURL ? info.photoURL : profile}
+                className="w-10 h-10 object-contain cursor-pointer rounded-full"
+                onClick={() => {
+                  !info ? signInHandle() : toggleBtn();
+                }}
+              />
+            </div>
+            {info && (
+              <div
+                className={`${
+                  toggle ? "flex" : "hidden"
+                } bg-blackVar absolute p-6 sm:top-20 top-44 sm:right-0 mx-4 my-2 min-w-[140px] rounded-s-xl sidebar`}
+              >
+                <AiOutlineClose
+                  className="absolute top-3 sm:left-3 right-3 cursor-pointer text-white"
+                  onClick={toggleBtn}
+                />
+
+                <div className="flex flex-col flex-1 justify-end items-center list-none gap-4">
+                  <p
+                    onClick={signOutHandle}
+                    className="text-white font-montserrat font-semibold cursor-pointer text-[16px]"
+                  >
+                    logout
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
       <ul className="flex items-center list-none gap-14 max-md:py-6">
         {navLinks.map((link) => (
           <li
             key={link.id}
-            className="font-poppins font-medium cursor-pointer text-[16px] min-w-max"
+            className="font-montserrat font-medium cursor-pointer text-[16px] min-w-max"
           >
             <NavLink
               to={link.to}
@@ -91,15 +127,18 @@ const Nav2 = ({ info, setInfo }) => {
         ))}
       </ul>
 
-      <div className="flex items-center gap-8">
+      <div className="md:flex hidden items-center gap-8">
         <div className="flex justify-end items-center">
-          <img
-            src={info && info.photoURL ? info.photoURL : profile}
-            className="w-10 h-10 object-contain cursor-pointer rounded-full"
-            onClick={() => {
-              !info ? signInHandle() : toggleBtn();
-            }}
-          />
+          <div className="border border-slate-400 rounded-full">
+            <img
+              src={info && info.photoURL ? info.photoURL : profile}
+              className="w-10 h-10 object-contain cursor-pointer rounded-full"
+              onClick={() => {
+                !info ? signInHandle() : toggleBtn();
+              }}
+            />
+          </div>
+
           {info && (
             <div
               className={`${
@@ -114,7 +153,7 @@ const Nav2 = ({ info, setInfo }) => {
               <div className="flex flex-col flex-1 justify-end items-center list-none gap-4">
                 <p
                   onClick={signOutHandle}
-                  className="text-white font-poppins font-semibold cursor-pointer text-[16px]"
+                  className="text-white font-montserrat font-semibold cursor-pointer text-[16px]"
                 >
                   logout
                 </p>

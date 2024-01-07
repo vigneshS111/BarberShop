@@ -101,10 +101,10 @@ const BookNow = ({ userUID }) => {
         className="max-w-[350px] max-h-[400px] md:block hidden"
       />
       <div className="bg-blackVar w-full flex flex-col py-5 md:px-44 px-8 gap-5">
-        <h2 className="text-wrap font-poppins md:text-[45px] text-[40px] tracking-wide font-extrabold text-white flex justify-center ">
+        <h2 className="text-wrap font-montserrat md:text-[45px] text-[40px] tracking-wide font-extrabold text-white flex justify-center ">
           BOOK NOW
         </h2>
-        <div className="grid grid-cols-2  grid-rows-2 gap-6 font-poppins tracking-wide">
+        <div className="grid grid-cols-2  grid-rows-2 gap-6 font-montserrat tracking-wide">
           <div className="flex flex-col gap-2">
             <label className="font-bold text-white">Date</label>
 
@@ -163,14 +163,14 @@ const BookNow = ({ userUID }) => {
           <button
             onClick={handleSubmission}
             disabled={submitButtonDisabled}
-            className=" border border-white text-white  tracking-wide font-poppins rounded-md font-bold py-2 px-4 transition duration-100"
+            className=" border border-white text-white  tracking-wide font-montserrat rounded-md font-bold py-2 px-4 transition duration-100"
           >
             send
           </button>
         </div>
       </div>
       {showSuccessModal && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
+        <div className="fixed inset-0 flex items-center justify-center z-50 font-montserrat">
           <div className="bg-white p-10 rounded-md shadow-md">
             <p className="text-primary font-bold">
               {userUID

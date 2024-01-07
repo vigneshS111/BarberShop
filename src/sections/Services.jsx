@@ -4,7 +4,7 @@ import { services } from "../constants";
 const Services = () => {
   return (
     <div className="flex flex-col gap-10 py-12 md:pb-[460px] sm:px-20 px-6 justify-center items-center bg-blackVar">
-      <h2 className="text-wrap font-poppins md:text-[45px] text-[40px] font-extrabold text-white tracking-wide">
+      <h2 className="text-wrap font-montserrat md:text-[45px] text-[40px] font-extrabold text-white tracking-wide">
         Barbershop Services
       </h2>
       <div className="flex md:flex-row flex-col gap-16">
@@ -17,7 +17,7 @@ const Services = () => {
                 className="flex flex-col justify-center items-center gap-3 bg-Lightgray rounded-2xl px-8 py-3"
               >
                 <img src={item.image} className="w-[80px] h-[80px]" />
-                <p className="flex font-poppins font-semibold text-xl">
+                <p className="flex font-montserrat font-semibold text-xl">
                   {item.title}
                 </p>
               </div>

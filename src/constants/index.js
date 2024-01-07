@@ -122,7 +122,7 @@ export const navLinks = [
     name:"Robert Downey JR",
     image:rdj,
     comment:"Just had an amazing experience at Your barbershop ! The vibes are trendy, the barbers are skilled artists, and the cut was spot-on. They not only understood my style but elevated it with expert precision. The attention to detail and friendly staff made the visit memorable.",
-    rating:"4.5"
+    rating:"4.0"
 
   },
   {

@@ -19,7 +19,7 @@ const ReviewCard = ({
   return (
     <>
       <div
-        className={`flex relative flex-col justify-center text-wrap font-poppins rounded-2xl  gap-2  px-8 py-5 ${
+        className={`flex relative flex-col justify-center text-wrap font-montserrat rounded-2xl  gap-2  px-8 py-5 ${
           reviewPage
             ? "w-[600px] shadow-lg bg-slate-50"
             : "max-w-[350px] max-h-[400px] bg-white"
@@ -34,7 +34,7 @@ const ReviewCard = ({
         </div>
         <div className="flex flex-row gap-1 items-center">
           <IoMdStar className="text-yellow-500 w-[25px] h-[25px] pb-1" />
-          <p className="font-poppins font-semibold">{rating}</p>
+          <p className="font-montserrat font-semibold">{rating}</p>
         </div>
         {hairStyleImg && (
           <img
