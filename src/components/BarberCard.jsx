@@ -8,7 +8,7 @@ const BarberCard = ({ name, role, abt, image }) => {
   return (
     <div className="flex justify-center">
       <div
-        className={`flex flex-col justify-end  bg-cover bg-center h-[350px] w-64 rounded-2xl px-5 py-5 font-poppins gap-4`}
+        className={`flex flex-col justify-end  bg-cover bg-center h-[350px] w-64 xl:w-[280px] xl:h-[380px] rounded-2xl px-5 py-5 font-poppins gap-4`}
         style={{
           backgroundImage: `linear-gradient(to right,rgba(0,0,0,0.5),rgba(0,0,0,0)),url(${image})`,
         }}

@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 const AboutUs = () => {
   return (
-    <div className=" flex justify-between py-6 flex-row sm:px-32 px-6 gap-5  ">
+    <div className=" flex justify-between py-6 flex-row sm:px-32 px-6 gap-5 xl:pb-24 ">
       <div className="flex flex-col gap-10  justify-start">
         <h2 className="text-wrap font-montserrat md:text-[48px] text-[44px] font-semibold md:leading-[65px] leading-[65px] ">
           ABOUT US

@@ -10,8 +10,8 @@ import "swiper/css/navigation";
 import ReviewCard from "../components/ReviewCard";
 const Experience = () => {
   return (
-    <div className="bg-secondary">
-      <div className="py-12 sm:px-20 px-6 flex flex-col gap-10 justify-center items-center md:absolute md:top-[600px] md:left-[60px]">
+    <div className="bg-secondary ">
+      <div className="w-full py-12 sm:px-20 px-6 flex flex-col gap-10 justify-center items-center md:absolute md:top-[600px]">
         <h2 className="text-wrap font-montserrat md:text-[45px] tracking-wide text-[40px] font-extrabold text-white">
           Experience the Best Haircut <br className="md:block hidden" /> & Shave
           Services{" "}

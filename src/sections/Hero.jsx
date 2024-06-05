@@ -6,7 +6,7 @@ import { branchInfo } from "../constants";
 import Button from "../components/Button";
 const Hero = () => {
   return (
-    <div className=" flex justify-between  pb-12 pt-6 flex-row sm:px-32 px-6 gap-5  ">
+    <div className=" flex justify-between  pb-12 pt-6 flex-row sm:px-32 px-6 gap-5 xl:pb-24 ">
       <div className="flex flex-col gap-10  justify-start items-center">
         <h2 className="text-wrap font-montserrat md:text-[48px] text-[44px] font-semibold md:leading-[65px] leading-[65px] ">
           <span className="font-medium md:text-[40px] text-[36px]">

@@ -58,7 +58,7 @@ const Nav2 = ({ info, setInfo }) => {
   return (
     <nav className="max-md:w-full md:gap-44 sm:px-20 px-8 py-3 flex md:justify-between justify-center items-center md:flex-row flex-col">
       <div className="flex flex-row justify-around items-center max-md:w-full ">
-        <div className="flex flex-row  items-center text-2xl">
+        <div className="flex flex-row  items-center xl:text-[26px] text-2xl">
           <img
             src={logo}
             alt="logo"
@@ -110,7 +110,7 @@ const Nav2 = ({ info, setInfo }) => {
         {navLinks.map((link) => (
           <li
             key={link.id}
-            className="font-montserrat font-medium cursor-pointer text-[16px] min-w-max"
+            className="font-montserrat font-medium cursor-pointer xl:text-[18px] text-[16px] min-w-max"
           >
             <NavLink
               to={link.to}
@@ -132,7 +132,7 @@ const Nav2 = ({ info, setInfo }) => {
           <div className="border border-slate-400 rounded-full">
             <img
               src={info && info.photoURL ? info.photoURL : profile}
-              className="w-10 h-10 object-contain cursor-pointer rounded-full"
+              className="xl:w-11 xl:h-11 w-10 h-10 object-contain cursor-pointer rounded-full"
               onClick={() => {
                 !info ? signInHandle() : toggleBtn();
               }}

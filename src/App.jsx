@@ -5,6 +5,7 @@ import Home from "./sections/Home";
 import OurTeam from "./sections/OurTeam";
 import Reviews from "./sections/Reviews";
 import BookNow from "./sections/BookNow";
+import NotFound from "./components/NotFound";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.config";
 import Nav2 from "./components/Nav2";
@@ -43,6 +44,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/ourTeam" element={<OurTeam />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <section id="bookNow" className="flexStart">
         <div className="boxWidth ">

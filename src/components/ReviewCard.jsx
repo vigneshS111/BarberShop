@@ -19,9 +19,9 @@ const ReviewCard = ({
   return (
     <>
       <div
-        className={`flex relative flex-col justify-center text-wrap font-montserrat rounded-2xl  gap-2  px-8 py-5 ${
+        className={`flex relative flex-col justify-center text-wrap font-montserrat rounded-2xl  gap-2 xl:gap-3  px-8 py-5 ${
           reviewPage
-            ? "w-[600px] shadow-lg bg-slate-50"
+            ? "w-[600px] xl:w-[700px] shadow-lg bg-slate-50"
             : "max-w-[350px] max-h-[400px] bg-white"
         } `}
       >
@@ -54,7 +54,7 @@ const ReviewCard = ({
       {Modal && (
         <div className="fixed inset-0 flex items-center justify-center z-[101] bg-slate-50">
           <div className="flex flex-col gap-4 relative">
-            <div className="absolute top-[8px] left-[8px] bg-black rounded-full">
+            <div className="absolute top-[8px] left-[8px] max-md:left-[46%] max-md:top-[-40px] bg-black rounded-full">
               <RxCross2
                 className="md:w-[32px] md:h-[32px] w-[40px] h-[40px] text-white cursor-pointer "
                 onClick={closeModal}
