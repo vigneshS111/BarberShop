@@ -43,7 +43,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ourTeam" element={<OurTeam />} />
-        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/reviews" element={<Reviews info={info} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <section id="bookNow" className="flexStart">

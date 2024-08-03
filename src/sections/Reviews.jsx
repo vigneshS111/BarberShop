@@ -10,7 +10,7 @@ import { addDoc, collection, onSnapshot } from "firebase/firestore";
 import { app, auth, firestore, provider } from "../firebase.config"; // Update the path to your Firebase config file
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
-const Reviews = () => {
+const Reviews = ({ info }) => {
   const storage = getStorage(app);
   const [customerReviews, setCustomerReviews] = useState([]);
   const [loggedIn, setLoggedIn] = useState(true);
@@ -40,7 +40,7 @@ const Reviews = () => {
 
   const isReviewValid = review.comment.trim() !== "";
   const isRatingValid = review.rate !== "";
-  const isPostButtonEnabled = isReviewValid && isRatingValid && loggedIn;
+  const isPostButtonEnabled = isReviewValid && isRatingValid && info;
 
   const handleImageChange = async (event) => {
     const file = event.target.files[0];
@@ -74,8 +74,9 @@ const Reviews = () => {
   };
   const postReview = async () => {
     const user = auth.currentUser;
-
-    if (!user) {
+    if (info) {
+      setLoggedIn(true);
+    } else if (!user) {
       setLoggedIn(false);
       console.error("User not authenticated");
       return;
